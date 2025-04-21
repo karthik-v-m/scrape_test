@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: allauthor-scraper
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python3 scrape_5.py
+    envVars:
+      - key: GOOGLE_CREDS_JSON
+        sync: false
